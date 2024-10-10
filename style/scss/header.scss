@@ -1,0 +1,100 @@
+$height-head:40px;
+.logo{
+    width: 50px;
+    height: 50px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.head{
+    $width-logo:50px;
+
+    width: 100%;
+    height: $height-head;
+    flex-basis: 100%;
+    background-color: rgb(223, 223, 223);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    li::marker{
+        content: "|";
+    }
+    li:first-child::marker{
+        content: "";
+        list-style-type: none;
+    }
+    li{
+        padding-left: 10px;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    ul{
+        float: right;
+        position: absolute;
+        right: 0;
+        margin-right: 20px;
+    }
+    .logo{
+        margin-left: 10px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style-type: none;
+    height: 100%;
+
+}
+nav{
+    $width-logo:50px;
+    $width-logos:10%;
+
+    width: 100%;
+    height: calc(100px - $height-head);
+    display: flex;
+
+    .links{
+        width: calc((100% - $width-logos)  - $width-logo);
+        a{
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+
+    .logos{
+        width: $width-logos ;
+        height: 100%;
+        ul{
+            width: 100% ;
+            height: 100%;
+            
+            li img{
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+
+    .logo{
+        margin-left: 10px;
+        width: 100px;
+        height: 100px;
+    }
+}

@@ -1,0 +1,129 @@
+.logo {
+  width: 50px;
+  height: 50px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+.logo:hover {
+  cursor: pointer;
+}
+
+.head {
+  width: 100%;
+  height: 40px;
+  flex-basis: 100%;
+  background-color: rgb(223, 223, 223);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.head li::marker {
+  content: "|";
+}
+.head li:first-child::marker {
+  content: "";
+  list-style-type: none;
+}
+.head li {
+  padding-left: 10px;
+}
+.head a {
+  text-decoration: none;
+}
+.head ul {
+  float: right;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+}
+.head .logo {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+  height: 100%;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+}
+nav .links {
+  width: calc(90% - 50px);
+}
+nav .links a {
+  font-weight: 700;
+  text-decoration: none;
+}
+nav .logos {
+  width: 10%;
+  height: 100%;
+}
+nav .logos ul {
+  width: 100%;
+  height: 100%;
+}
+nav .logos ul li img {
+  width: 30px;
+  height: 30px;
+}
+nav .logo {
+  margin-left: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+:root {
+  --height_header:130px;
+  --height_main_min:100vh;
+  --height_footer:200px;
+}
+
+body {
+  display: grid;
+  grid-template-rows: var(--height_header) minmax(var(--height_main_min), auto) var(--height_footer);
+  grid-template-columns: 100%;
+}
+
+header, main, footer {
+  grid-column: 1/2;
+}
+
+header {
+  grid-row: 1/2;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  grid-row: 2/3;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  grid-row: 3/4;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */
